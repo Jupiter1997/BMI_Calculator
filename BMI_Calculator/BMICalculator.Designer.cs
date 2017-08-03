@@ -1,6 +1,6 @@
 ﻿namespace BMI_Calculator
 {
-    partial class Form1
+    partial class BMICalculator
     {
         /// <summary>
         /// Required designer variable.
