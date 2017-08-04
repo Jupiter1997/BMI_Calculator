@@ -43,8 +43,8 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.labelBmi = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.labelScale = new System.Windows.Forms.Label();
             this.lblScale = new System.Windows.Forms.Label();
+            this.labelScale = new System.Windows.Forms.Label();
             this.BoxScaleBar = new System.Windows.Forms.PictureBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -82,7 +82,6 @@
             this.RadImperial.TabStop = true;
             this.RadImperial.Text = "Imperial";
             this.RadImperial.UseVisualStyleBackColor = true;
-
             // 
             // RadMetric
             // 
@@ -94,6 +93,7 @@
             this.RadMetric.TabStop = true;
             this.RadMetric.Text = "Metric";
             this.RadMetric.UseVisualStyleBackColor = true;
+            this.RadMetric.CheckedChanged += new System.EventHandler(this.RadMetric_CheckedChanged);
             // 
             // labelhei
             // 
@@ -119,7 +119,7 @@
             this.lblHeight.Size = new System.Drawing.Size(49, 31);
             this.lblHeight.TabIndex = 4;
             this.lblHeight.Text = "lbs";
-  
+          
             // 
             // Title
             // 
@@ -168,7 +168,7 @@
             // lblBMI
             // 
             this.lblBMI.AutoSize = true;
-            this.lblBMI.Location = new System.Drawing.Point(100, 0);
+            this.lblBMI.Location = new System.Drawing.Point(99, 0);
             this.lblBMI.Name = "lblBMI";
             this.lblBMI.Size = new System.Drawing.Size(74, 31);
             this.lblBMI.TabIndex = 4;
@@ -222,6 +222,15 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(281, 100);
             this.tableLayoutPanel2.TabIndex = 8;
             // 
+            // lblScale
+            // 
+            this.lblScale.AutoSize = true;
+            this.lblScale.Location = new System.Drawing.Point(99, 50);
+            this.lblScale.Name = "lblScale";
+            this.lblScale.Size = new System.Drawing.Size(172, 31);
+            this.lblScale.TabIndex = 9;
+            this.lblScale.Text = "UnderWeight";
+            // 
             // labelScale
             // 
             this.labelScale.AutoSize = true;
@@ -230,15 +239,6 @@
             this.labelScale.Size = new System.Drawing.Size(90, 31);
             this.labelScale.TabIndex = 8;
             this.labelScale.Text = "Scale:";
-            // 
-            // lblScale
-            // 
-            this.lblScale.AutoSize = true;
-            this.lblScale.Location = new System.Drawing.Point(100, 50);
-            this.lblScale.Name = "lblScale";
-            this.lblScale.Size = new System.Drawing.Size(172, 31);
-            this.lblScale.TabIndex = 9;
-            this.lblScale.Text = "UnderWeight";
             // 
             // BoxScaleBar
             // 
@@ -259,7 +259,6 @@
             this.menuStrip1.Size = new System.Drawing.Size(304, 24);
             this.menuStrip1.TabIndex = 10;
             this.menuStrip1.Text = "menuStrip1";
-
             // 
             // fileToolStripMenuItem
             // 
