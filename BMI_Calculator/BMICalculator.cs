@@ -16,5 +16,7 @@ namespace BMI_Calculator
         {
             InitializeComponent();
         }
+
+ 
     }
 }
