@@ -82,6 +82,7 @@
             this.RadImperial.TabStop = true;
             this.RadImperial.Text = "Imperial";
             this.RadImperial.UseVisualStyleBackColor = true;
+            this.RadImperial.CheckedChanged += new System.EventHandler(this.RadImperial_CheckedChanged);
             // 
             // RadMetric
             // 
@@ -119,7 +120,6 @@
             this.lblHeight.Size = new System.Drawing.Size(49, 31);
             this.lblHeight.TabIndex = 4;
             this.lblHeight.Text = "lbs";
-          
             // 
             // Title
             // 
@@ -139,6 +139,7 @@
             this.btnCalculateBMI.TabIndex = 3;
             this.btnCalculateBMI.Text = "Calculate BMI!";
             this.btnCalculateBMI.UseVisualStyleBackColor = true;
+            this.btnCalculateBMI.Click += new System.EventHandler(this.btnCalculateBMI_Click);
             // 
             // lblWeight
             // 
