@@ -45,16 +45,22 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.lblScale = new System.Windows.Forms.Label();
             this.labelScale = new System.Windows.Forms.Label();
-            this.BoxScaleBar = new System.Windows.Forms.PictureBox();
+            this.pbUnder = new System.Windows.Forms.PictureBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.infoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pbNormal = new System.Windows.Forms.PictureBox();
+            this.pbOver = new System.Windows.Forms.PictureBox();
+            this.pbObese = new System.Windows.Forms.PictureBox();
             this.RadioHeadLayout.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.BoxScaleBar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUnder)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbNormal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbOver)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbObese)).BeginInit();
             this.SuspendLayout();
             // 
             // RadioHeadLayout
@@ -241,13 +247,15 @@
             this.labelScale.TabIndex = 8;
             this.labelScale.Text = "Scale:";
             // 
-            // BoxScaleBar
+            // pbUnder
             // 
-            this.BoxScaleBar.Location = new System.Drawing.Point(18, 404);
-            this.BoxScaleBar.Name = "BoxScaleBar";
-            this.BoxScaleBar.Size = new System.Drawing.Size(263, 25);
-            this.BoxScaleBar.TabIndex = 9;
-            this.BoxScaleBar.TabStop = false;
+            this.pbUnder.BackColor = System.Drawing.Color.Yellow;
+            this.pbUnder.Location = new System.Drawing.Point(18, 404);
+            this.pbUnder.Name = "pbUnder";
+            this.pbUnder.Size = new System.Drawing.Size(74, 25);
+            this.pbUnder.TabIndex = 9;
+            this.pbUnder.TabStop = false;
+            this.pbUnder.Click += new System.EventHandler(this.BoxScaleBar_Click);
             // 
             // menuStrip1
             // 
@@ -279,18 +287,48 @@
             this.infoToolStripMenuItem.Size = new System.Drawing.Size(40, 20);
             this.infoToolStripMenuItem.Text = "Info";
             // 
+            // pbNormal
+            // 
+            this.pbNormal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.pbNormal.Location = new System.Drawing.Point(18, 404);
+            this.pbNormal.Name = "pbNormal";
+            this.pbNormal.Size = new System.Drawing.Size(138, 25);
+            this.pbNormal.TabIndex = 11;
+            this.pbNormal.TabStop = false;
+            // 
+            // pbOver
+            // 
+            this.pbOver.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.pbOver.Location = new System.Drawing.Point(18, 404);
+            this.pbOver.Name = "pbOver";
+            this.pbOver.Size = new System.Drawing.Size(207, 25);
+            this.pbOver.TabIndex = 12;
+            this.pbOver.TabStop = false;
+            // 
+            // pbObese
+            // 
+            this.pbObese.BackColor = System.Drawing.Color.Red;
+            this.pbObese.Location = new System.Drawing.Point(18, 404);
+            this.pbObese.Name = "pbObese";
+            this.pbObese.Size = new System.Drawing.Size(262, 25);
+            this.pbObese.TabIndex = 13;
+            this.pbObese.TabStop = false;
+            // 
             // BMICalculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(304, 441);
-            this.Controls.Add(this.BoxScaleBar);
+            this.Controls.Add(this.pbUnder);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.btnCalculateBMI);
             this.Controls.Add(this.Title);
             this.Controls.Add(this.RadioHeadLayout);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.pbNormal);
+            this.Controls.Add(this.pbOver);
+            this.Controls.Add(this.pbObese);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MainMenuStrip = this.menuStrip1;
@@ -305,9 +343,12 @@
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.BoxScaleBar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUnder)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbNormal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbOver)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbObese)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -332,11 +373,14 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Label lblScale;
         private System.Windows.Forms.Label labelScale;
-        private System.Windows.Forms.PictureBox BoxScaleBar;
+        private System.Windows.Forms.PictureBox pbUnder;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem infoToolStripMenuItem;
+        private System.Windows.Forms.PictureBox pbNormal;
+        private System.Windows.Forms.PictureBox pbOver;
+        private System.Windows.Forms.PictureBox pbObese;
     }
 }
 

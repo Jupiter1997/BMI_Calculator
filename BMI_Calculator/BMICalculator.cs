@@ -11,7 +11,7 @@ using System.Windows.Forms;
  * Name: Marvin Jupiter Vargas
  * Date: August 3, 2017
  * Description: This is a BMI Calculator that Check if an individual has the right MAss index
- * Version 0.1
+ * Version 0.2: added picture boxes that will act as "Scale Bar"
  */
 namespace BMI_Calculator
 {
@@ -62,18 +62,34 @@ namespace BMI_Calculator
                 if (bmiResult < 18.5)
                 {
                     lblScale.Text = scale[0];
+                    pbUnder.Visible = true;
+                    pbNormal.Visible = false;
+                    pbOver.Visible = false;
+                    pbObese.Visible = false;
                 }
                 if (24.9 > bmiResult && bmiResult > 18.5)
                 {
                     lblScale.Text = scale[1];
+                    pbUnder.Visible = false;
+                    pbNormal.Visible = true;
+                    pbOver.Visible = false;
+                    pbObese.Visible = false;
                 }
                 if (29.9 > bmiResult && bmiResult > 25)
                 {
                     lblScale.Text = scale[2];
+                    pbUnder.Visible = false;
+                    pbNormal.Visible = false;
+                    pbOver.Visible = true;
+                    pbObese.Visible = false;
                 }
                 if (bmiResult > 30)
                 {
                     lblScale.Text = scale[3];
+                    pbUnder.Visible = false;
+                    pbNormal.Visible = false;
+                    pbOver.Visible = false;
+                    pbObese.Visible = true;
                 }
                 lblBMI.Text = bmiResult.ToString();
             }
@@ -83,21 +99,42 @@ namespace BMI_Calculator
                 if (bmiResult < 18.5)
                 {
                     lblScale.Text = scale[0];
+                    pbUnder.Visible = true;
+                    pbNormal.Visible = false;
+                    pbOver.Visible = false;
+                    pbObese.Visible = false;
                 }
                 if (24.9 > bmiResult && bmiResult > 18.5)
                 {
                     lblScale.Text = scale[1];
+                    pbUnder.Visible = false;
+                    pbNormal.Visible = true;
+                    pbOver.Visible = false;
+                    pbObese.Visible = false;
                 }
                 if (29.9 > bmiResult && bmiResult > 25)
                 {
                     lblScale.Text = scale[2];
+                    pbUnder.Visible = false;
+                    pbNormal.Visible = false;
+                    pbOver.Visible = true;
+                    pbObese.Visible = false;
                 }
                 if (bmiResult > 30)
                 {
                     lblScale.Text = scale[3];
+                    pbUnder.Visible = false;
+                    pbNormal.Visible = false;
+                    pbOver.Visible = false;
+                    pbObese.Visible = true;
                 }
                 lblBMI.Text = bmiResult.ToString();
             }
+        }
+
+        private void BoxScaleBar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
