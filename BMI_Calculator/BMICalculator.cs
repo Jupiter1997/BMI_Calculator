@@ -9,7 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 /*
  * Name: Marvin Jupiter Vargas
- * Date: August 3, 2017
+ * Student No. : 300901192
+ * Date: August 11, 2017
  * Description: This is a BMI Calculator that Check if an individual has the right MAss index
  * Version 0.2: added picture boxes that will act as "Scale Bar"
  */
