@@ -12,7 +12,7 @@ using System.Windows.Forms;
  * Student No. : 300901192
  * Date: August 11, 2017
  * Description: This is a BMI Calculator that Check if an individual has the right MAss index
- * Version 0.2: added picture boxes that will act as "Scale Bar"
+ * Version 0.3: Added a reset button
  */
 namespace BMI_Calculator
 {
@@ -135,6 +135,21 @@ namespace BMI_Calculator
 
         private void BoxScaleBar_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            
+            lblBMI.Text = "0000";
+            lblScale.Text = "";
+            txtHeight.Text = "";
+            txtWeight.Text = "";
+            
+            pbUnder.Visible = true;
+            pbNormal.Visible = true;
+            pbOver.Visible = true;
+            pbObese.Visible = true;
 
         }
     }

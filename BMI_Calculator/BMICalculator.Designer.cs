@@ -45,19 +45,20 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.lblScale = new System.Windows.Forms.Label();
             this.labelScale = new System.Windows.Forms.Label();
-            this.pbUnder = new System.Windows.Forms.PictureBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.infoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pbUnder = new System.Windows.Forms.PictureBox();
             this.pbNormal = new System.Windows.Forms.PictureBox();
             this.pbOver = new System.Windows.Forms.PictureBox();
             this.pbObese = new System.Windows.Forms.PictureBox();
+            this.btnReset = new System.Windows.Forms.Button();
             this.RadioHeadLayout.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbUnder)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUnder)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbNormal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbOver)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbObese)).BeginInit();
@@ -139,9 +140,9 @@
             // btnCalculateBMI
             // 
             this.btnCalculateBMI.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnCalculateBMI.Location = new System.Drawing.Point(70, 217);
+            this.btnCalculateBMI.Location = new System.Drawing.Point(9, 217);
             this.btnCalculateBMI.Name = "btnCalculateBMI";
-            this.btnCalculateBMI.Size = new System.Drawing.Size(155, 75);
+            this.btnCalculateBMI.Size = new System.Drawing.Size(134, 67);
             this.btnCalculateBMI.TabIndex = 3;
             this.btnCalculateBMI.Text = "Calculate BMI!";
             this.btnCalculateBMI.UseVisualStyleBackColor = true;
@@ -234,9 +235,8 @@
             this.lblScale.AutoSize = true;
             this.lblScale.Location = new System.Drawing.Point(99, 50);
             this.lblScale.Name = "lblScale";
-            this.lblScale.Size = new System.Drawing.Size(172, 31);
+            this.lblScale.Size = new System.Drawing.Size(0, 31);
             this.lblScale.TabIndex = 9;
-            this.lblScale.Text = "UnderWeight";
             // 
             // labelScale
             // 
@@ -246,16 +246,6 @@
             this.labelScale.Size = new System.Drawing.Size(90, 31);
             this.labelScale.TabIndex = 8;
             this.labelScale.Text = "Scale:";
-            // 
-            // pbUnder
-            // 
-            this.pbUnder.BackColor = System.Drawing.Color.Yellow;
-            this.pbUnder.Location = new System.Drawing.Point(18, 404);
-            this.pbUnder.Name = "pbUnder";
-            this.pbUnder.Size = new System.Drawing.Size(74, 25);
-            this.pbUnder.TabIndex = 9;
-            this.pbUnder.TabStop = false;
-            this.pbUnder.Click += new System.EventHandler(this.BoxScaleBar_Click);
             // 
             // menuStrip1
             // 
@@ -287,6 +277,16 @@
             this.infoToolStripMenuItem.Size = new System.Drawing.Size(40, 20);
             this.infoToolStripMenuItem.Text = "Info";
             // 
+            // pbUnder
+            // 
+            this.pbUnder.BackColor = System.Drawing.Color.Yellow;
+            this.pbUnder.Location = new System.Drawing.Point(18, 404);
+            this.pbUnder.Name = "pbUnder";
+            this.pbUnder.Size = new System.Drawing.Size(74, 25);
+            this.pbUnder.TabIndex = 9;
+            this.pbUnder.TabStop = false;
+            this.pbUnder.Click += new System.EventHandler(this.BoxScaleBar_Click);
+            // 
             // pbNormal
             // 
             this.pbNormal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
@@ -314,11 +314,23 @@
             this.pbObese.TabIndex = 13;
             this.pbObese.TabStop = false;
             // 
+            // btnReset
+            // 
+            this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnReset.Location = new System.Drawing.Point(161, 217);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(134, 67);
+            this.btnReset.TabIndex = 14;
+            this.btnReset.Text = "Reset";
+            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
             // BMICalculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(304, 441);
+            this.Controls.Add(this.btnReset);
             this.Controls.Add(this.pbUnder);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel1);
@@ -343,9 +355,9 @@
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbUnder)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUnder)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbNormal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbOver)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbObese)).EndInit();
@@ -381,6 +393,7 @@
         private System.Windows.Forms.PictureBox pbNormal;
         private System.Windows.Forms.PictureBox pbOver;
         private System.Windows.Forms.PictureBox pbObese;
+        private System.Windows.Forms.Button btnReset;
     }
 }
 
