@@ -133,11 +133,12 @@ namespace BMI_Calculator
             }
         }
 
-        private void BoxScaleBar_Click(object sender, EventArgs e)
-        {
-
-        }
-
+       
+        /// <summary>
+        /// This is the reset button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnReset_Click(object sender, EventArgs e)
         {
             

@@ -285,7 +285,7 @@
             this.pbUnder.Size = new System.Drawing.Size(74, 25);
             this.pbUnder.TabIndex = 9;
             this.pbUnder.TabStop = false;
-            this.pbUnder.Click += new System.EventHandler(this.BoxScaleBar_Click);
+  
             // 
             // pbNormal
             // 

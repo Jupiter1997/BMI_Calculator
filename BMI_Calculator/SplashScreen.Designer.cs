@@ -54,7 +54,7 @@
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "BMI \r\nCalculator\r\n";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblTitle.Click += new System.EventHandler(this.label1_Click);
+        
             // 
             // lblCopyright
             // 
